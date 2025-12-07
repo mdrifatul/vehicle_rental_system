@@ -22,7 +22,6 @@ const updateUser = async (
   }
   if (req?.user.role === "customer") {
     if (req?.user.id !== Number(id)) {
-      console.log(id);
       return { message: "You are not allowd" };
     }
   }

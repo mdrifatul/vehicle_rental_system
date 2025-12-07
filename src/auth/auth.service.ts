@@ -17,7 +17,6 @@ const signUp = async (Payload: Record<string, unknown>) => {
 
 const signIn = async (Payload: Record<string, unknown>) => {
   const { email, password } = Payload;
-  console.log(Payload);
   const result = await pool.query(`SELECT * FROM users WHERE email=$1`, [
     email,
   ]);

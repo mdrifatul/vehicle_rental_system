@@ -37,7 +37,6 @@ const getSingle = async (req: Request, res: Response) => {
     const result = await vechileService.getSingle(
       req.params.vehicleId as string
     );
-    console.log(result);
     if (result.rows.length === 0) {
       res.status(404).json({
         success: false,
@@ -89,7 +88,6 @@ const deleteVehile = async (req: Request, res: Response) => {
     const result = await vechileService.deleteVehile(
       req.params.vehicleId as string
     );
-    console.log(result);
     if (!result) {
       return res.status(400).json({
         success: false,
